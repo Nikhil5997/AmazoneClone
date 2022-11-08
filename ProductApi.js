@@ -8,7 +8,8 @@ const ProductApi=()=>{
 
   const addCart = (item) => {
      const newItem = {...item, quantity: 1};
-     setState([...cart, newItem]);
+     setCart([...cart, newItem]);
+      Console.log(newItem)
   };
 
   useEffect(()=>{
