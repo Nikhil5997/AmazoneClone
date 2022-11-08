@@ -4,6 +4,12 @@ import React,{useState,useEffect} from 'react'
 const ProductApi=()=>{
   const url =  'https://dummyjson.com/products';
   const [data,setData] = useState([])
+  const [cart, setCart] = useState([])
+
+  const addCart = (item) => {
+     const newItem = {...item, quantity: 1};
+     setState([...cart, newItem]);
+  };
 
   useEffect(()=>{
     fetch(url).then(response=>response.json()).then(json=>{
@@ -26,7 +32,7 @@ const ProductApi=()=>{
           <div className='protittle'><h2>{item.title}</h2></div>
           <div className='proprice'><h3>Price : {item.price}</h3></div>
           <div className='probrand'><h4>{item.brand}</h4></div>
-          <button type='submit'>Add to card</button>
+          <button type='button' onClick={() => addCart(item)}>Add to card</button>
           
           
   
