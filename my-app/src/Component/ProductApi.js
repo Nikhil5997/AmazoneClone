@@ -1,0 +1,61 @@
+import React, { useState, useEffect } from "react";
+
+
+const ProductApi = () => {
+  const url = "https://dummyjson.com/products";
+  const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const addCart = (item) => {
+    const newItem = { ...item, quantity: 1 };
+    setCart([...cart, newItem]);
+    console.log(newItem);
+    
+    localStorage.setItem('carts', JSON.stringify(cart))
+    console.log(localStorage.getItem('carts'))
+  };
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setData(json.products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <div className="main-container">
+      <h1>ProductApi</h1>
+      <div className="grid-wrapper">
+        {data.map((item, index) => {
+          return (
+            <div key={item.index}>
+              {/* <div className='cardp'>{index+1}</div>*/}
+
+              <div className="proimg">
+                <img alt="img not found" src={item.images[2]} />
+              </div>
+              <div className="protittle">
+                <h2>{item.title}</h2>
+              </div>
+              <div className="proprice">
+                <h3>Price : {item.price}</h3>
+              </div>
+              <div className="probrand">
+                <h4>{item.brand}</h4>
+              </div>
+              <button onClick={() => addCart(item)}>Add Here</button>
+              
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default ProductApi;

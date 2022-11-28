@@ -1,0 +1,139 @@
+.card{
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-inline-grid;
+  grid: 150px / auto auto auto;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+ 
+}
+
+
+ .proimg{
+    height: 300px;
+    width: 100%;
+    border: 1 dashed #ccc;
+    overflow: hidden;
+    position: relative;
+    border: solid black;
+ }
+
+ .proimg img{
+   width: 100% ;
+ }
+
+ .protittle .proprice{
+   margin-bottom: 150px;
+ }
+
+ .cardp{
+  padding-bottom: 100px;
+ }
+
+ .grid-wrapper{
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+
+
+}
+.grid-wrapper li{
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 24px;
+  list-style-type: none;
+  padding: 5rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  
+ 
+}
+.main-container{
+  margin: 0 auto;
+  max-width: 1170px;
+  padding:2rem 1rem;
+}
+
+.index{
+  display: none;
+}
+
+.btn{
+  color: black;
+  background-color: yellow;
+  height: 30px;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.login{
+  border: 3px solid black;
+  height: 450px;
+  width: 30%;
+  margin-left: 700px;
+  margin-top: 70px;
+}
+
+.sign{
+  border: 3px solid black;
+  height: 70  0px;
+  width: 30%;
+  margin-left: 700px;
+  margin-top: 70px;
+}
+
+.main-box{
+  height: 900px;
+  width: 100%;
+
+}
+
+.btn1{
+  background-color: yellow;
+  width: 90%;
+  height: 30px;
+  font-weight: bold;
+}
+
+input{
+  width: 90%;
+  width: 90%;
+  height: 30px;
+}
+
+.img-box{
+  height: 150px;
+  width: 30%;
+  background-image: url('./img/ni.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  margin-bottom: 80px;
+  margin-left: 700px;
+
+}
+
+form h1 h4{
+  margin-right: 50px;
+}
+
+.Navbar nav {
+  background-color: yellow;
+  padding: 5px;
+  line-height: 40px;
+  font-size: 18px;
+  margin-right: 20px; 
+  
+}
+
+
+
